@@ -1,23 +1,4 @@
 import streamlit as st
-from PIL import Image, ImageDraw
-import requests as q
-import ujson
-
-
-def to_circle(image_path):
-    image = Image.open(image_path).convert("RGBA")
-
-    # Create a mask to apply the circular crop
-    mask = Image.new("L", image.size, 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((0, 0) + image.size, fill=255)
-
-    # Apply the mask to the input image
-    circular_image = Image.new("RGBA", image.size)
-    circular_image.paste(image, (0, 0), mask)
-
-    # Save the output image
-    circular_image.save(image_path)
 
 def list_keywords(keywords, type):
     if type == "experience":

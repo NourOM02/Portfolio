@@ -1,10 +1,8 @@
 import streamlit as st
 import json
 from tools import exp_ct, edu_ct, article_ct
-import ujson
 import requests as q
 from bs4 import BeautifulSoup
-import os
 
 content = json.load(open("content.json"))
 header = content["Header"]
@@ -48,7 +46,7 @@ st.markdown(f"""
 
 st.write(header["Description"])
 
-Experience, Education, projects, Article = st.tabs(["Experience", "Education", "Projects", "Featured Articles"])
+Experience, Education, Projects, Article, Skills = st.tabs(["Experience", "Education", "Projects", "Featured Articles", "Skills"])
 
 with Experience:
     for key in experience:
