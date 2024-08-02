@@ -1,90 +1,198 @@
-div.links a {
-    color : #3572EF;
-    text-decoration : none;
-    padding: 5px 10px;
-    border-radius: 20px;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'ubuntu', sans-serif;
 }
 
-div.links a.active {
-    color : white;
-    background-color: #3572EF;
-}
-
-div.links a:hover {
-    background-color: #3572EF;
-    color: white;
-}
-
-div.links a.active:hover {
-    background-color: white;
-    border: #3572EF solid 2px;
-    color: #3572ef;
-}
-
-p.contact {
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 2rem auto;
     text-align: center;
-    margin-top: 0px 10px;
+}
+
+h3 {
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.6em;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+h6 {
+    font-size: 1.32em;
+    color: #000;
+    margin-top: 20px;
+}
+
+.intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 200px; /* Adjust as needed */
+    margin-right: 1rem;
+    text-align: left;
+}
+
+.special {
+    background: linear-gradient(to right, #4B70F5, #3ABEF9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.intro-image {
+    flex: 1;
+    max-width: 200px; /* Adjust as needed */
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.intro-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.links-left, .links-right {
+    display: flex;
+    align-items: center;
+}
+
+.links-left {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.links-right {
+    justify-content: flex-end;
+}
+
+.intro-links .link {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    transition: color 0.3s;
+}
+
+.links-left .link:hover {
+    color: #4B70F5;
+}
+
+.links-right .link:hover {
+    color: #4B70F5;
+}
+
+.intro-links .icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    margin-right: 8px;
+    transition: color 0.3s;
+}
+
+.links-left .icon{
+    filter: invert(34%) sepia(90%) saturate(1477%) hue-rotate(215deg) brightness(98%) contrast(97%);
+}
+
+.links-right .icon{
+    filter : invert(100%) sepia(0%) saturate(7474%) hue-rotate(52deg) brightness(96%) contrast(110%)
+}
+
+.links-right .link {
+    background-color: #4B70F5; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Button corners */
+    font-weight: bold; /* Button text weight */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.links-right .link:hover {
+    background-color: white; /* Button hover background color */
+    border: 1px solid #4B70F5; /* Button hover border */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Button hover shadow */
+}
+
+.links-right .link:hover .icon {
+    filter: invert(34%) sepia(90%) saturate(1477%) hue-rotate(215deg) brightness(98%) contrast(97%);
 }
 
 
-p span.keyword {
-    color: #3572ef;
-    padding: 5px 10px;
+.intro-bio {
+    width: 100%;
+    margin-top: 1rem;
 }
 
-p span.keyword.first {
-    padding: 10px 5px 10px 0px;
+.section-title {
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #4B70F5, #3ABEF9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
+.intro-bio p {
+    text-align: justify;
+    font-size: .9em;
+    color: #000;
+    line-height: 1.6;
+}
 
+@media (max-width: 1024px) {
+    section {
+        width: 90%;
+    }
 
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .intro-text {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
 
+    .intro-image {
+        margin-bottom: 1rem;
+    }
 
+    .intro-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
+    .links-right {
+        margin-top: 16px;    
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Style inputs with type="text", type="email"and textareas */
-input[type=text], input[type=email], textarea {
-    width: 100%; /* Full width */
-    padding: 8px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  button[type=submit] {
-    background-color: #3572ef;
-    color: white;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  button[type=submit]:hover {
-    background-color: white;
-    border: 1px solid #3572ef;
-    color :#3572ef;
-  }
-
+    .links-right, .links-left {
+        width: 100%;
+        justify-content: center;
+    }
+}
