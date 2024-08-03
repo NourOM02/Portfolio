@@ -161,6 +161,80 @@ h6 {
     line-height: 1.6;
 }
 
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.experience-container:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.experience-logo img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    margin-right: 1.5rem;
+    border-radius: 4px;
+}
+
+.experience-details {
+    flex: 1;
+    text-align: left;
+}
+
+.company-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.role-duration-place {
+    font-size: .9em;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.role {
+    font-weight: bold;
+}
+
+.duration {
+    font-style: italic;
+}
+
+.place {
+    font-style: italic;
+    color: #777;
+}
+
+.description {
+    font-size: .95em;
+    text-align: justify;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.keyword {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
 @media (max-width: 1024px) {
     section {
         width: 90%;
@@ -194,5 +268,18 @@ h6 {
     .links-right, .links-left {
         width: 100%;
         justify-content: center;
+    }
+
+    .experience-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-logo {
+        margin-bottom: 1rem;
+    }
+
+    .experience-logo img {
+        width: 50px; /* Adjust as needed */
     }
 }
