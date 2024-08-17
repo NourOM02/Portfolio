@@ -64,16 +64,9 @@ h6 {
     font-weight: 100;
 }
 
-.description-container .description span {
-    background-color: #E5FCFF;
+.description-container .description {
     background-repeat: no-repeat;
-    background-size: 100% 1em;
-    background-position: 0 88%;
-    transition: background-color 0.4s ease-in;
-}
-
-.description-container .description span:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .intro-image {
@@ -423,7 +416,6 @@ h6 {
 .more-row {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
 }
 
 .more-cell {
@@ -443,13 +435,45 @@ h6 {
 
 .more-cell i {
     color: #4B70F5;
-}  
+}
+
+/* Start experiment */
+
+.Contact {
+    position: relative;
+    width: 100%;
+}
+  
+.get-touch-bg {
+    opacity: 0.1;
+    display: block;
+    width: 100%;
+    height: 700px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: .5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 .contact-container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    width: 65%;
+    width: 70%;
+    margin: 3vh 0;
 }
 
 form {
@@ -492,7 +516,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 1rem 0;
+    padding: .5rem 0;
 }
 
 footer p {
@@ -579,7 +603,12 @@ footer p {
     }
 
     .contact-container {
-        width: 100%;
+        width: 150%;
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .links-right .link {
+        background-color: green;
+    }
+}
