@@ -16,29 +16,14 @@ section {
     flex-direction: column;
     align-items: center;
     width: 70vw;
-    max-width: 1800px;
+    max-width: 1500px;
     margin: 0 auto 2rem auto;
     padding : 2rem;
     text-align: center;
 }
 
-h3 {
-    font-size: 2em;
+h1, h3, h6 {
     color: #210B2C;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 2.6em;
-    font-weight: 400;
-    color: #210B2C;
-    margin: 0;
-}
-
-h6 {
-    font-size: 1.32em;
-    color: #210B2C;
-    margin-top: 20px;
 }
 
 .intro-container {
@@ -50,9 +35,25 @@ h6 {
 
 .intro-text {
     flex: 1;
-    min-width: 200px;
+    min-width: 300px;
     margin-right: 1rem;
     text-align: left;
+}
+
+.intro-text h1 {
+    font-size: 2.6em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.intro-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.intro-text h6 {
+    font-size: 1.32em;
+    margin-top: 20px;
 }
 
 .description-container {
@@ -62,16 +63,14 @@ h6 {
 .description-container .description {
     color: black;
     font-weight: 100;
-}
-
-.description-container .description {
+    padding: .1rem;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 .intro-image {
     flex: 1;
-    max-width: 350px; /* Adjust as needed */
+    max-width: 350px;
 }
 
 .intro-image img {
@@ -179,17 +178,16 @@ h6 {
 .line-with-background {
     min-width: 80px;
     width: 10%;
-    height: 5px; /* Adjust height as needed */
-    background-image: url('media/line-bg.jpg'); /* Replace with your image path */
+    height: 5px;
+    background-image: url('media/line-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     border-radius: 5px;
     margin-bottom: 2rem;
-  }
+}
 
-.experience-container {
-    width: 70%;
+.container {
     margin: 1rem 0 0 0;
     padding: 1rem;
     border-left: 4px solid #4B70F5;
@@ -197,7 +195,11 @@ h6 {
     transition: box-shadow 0.3s;
 }
 
-.experience-container:hover {
+.experience-ct {
+    width: 70%;
+}
+
+.container:hover {
     box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.15);
 }
 
@@ -270,21 +272,21 @@ h6 {
     font-size: 0.9em;
 }
 
-.experience-footer {
+.container-footer {
     display: flex;
     justify-content: right;
     align-items: center;
     margin-top: 1rem;
 }
 
-.experience-footer a {
+.container-footer a {
     color: black;
     font-size: 1.2em;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.experience-footer a:hover {
+.container-footer a:hover {
     color: #4B70F5;
 }
 
@@ -294,13 +296,9 @@ h6 {
     justify-content: center;
 }
 
-.project-cell {
+.project-cell, .article-cell{
     margin: 1%;
     width: 48%;
-    padding: 1rem;
-    border-left: 4px solid #4B70F5;
-    box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
 }
 
 .project-cell:hover {
@@ -329,19 +327,6 @@ h6 {
 .articles-row {
     width: 100%;
     display: flex;
-}
-
-.article-cell {
-    margin: 1%;
-    width: 48%;
-    padding: 1rem;
-    border-left: 4px solid #4B70F5;
-    box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-}
-
-.article-cell:hover {
-    box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.15);
 }
 
 .article-cell a {
@@ -391,14 +376,6 @@ h6 {
 .achievement-cell {
     width: 23%;
     margin: 1%;
-    padding: 1rem;
-    border-left: 4px solid #4B70F5;
-    box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
-}
-
-.achievement-cell:hover {
-    box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.15);
 }
 
 .achievement-special {
